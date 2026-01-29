@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Riverside Cafe - Waterfront dining on the Indian River Lagoon in Vero Beach, Florida. Fresh seafood, stunning sunset views, and the best sports experience.">
+  <meta name="keywords" content="Riverside Cafe, Vero Beach, waterfront dining, seafood, Indian River Lagoon, sports bar, boat docking">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Riverside Cafe - Waterfront Dining in Vero Beach">
+  <meta property="og:description" content="Fresh seafood, scenic views, and the best sports experience on the Indian River Lagoon.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <title>Riverside Cafe | Waterfront Dining in Vero Beach, FL</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-anchor"></i>
+        </div>
+        <div class="logo-text-wrap">
+          <span class="logo-text">Riverside Cafe</span>
+          <span class="logo-tagline">Vero Beach, FL</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="menu.html" class="nav-link">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="events.html" class="nav-link">Events</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item nav-cta">
+          <a href="tel:7722345550" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
+        </li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <!-- Background Slideshow -->
+    <div class="hero-slideshow">
+      <div class="hero-slide hero-slide--1 active" data-slide="0"></div>
+      <div class="hero-slide hero-slide--2" data-slide="1"></div>
+      <div class="hero-slide hero-slide--3" data-slide="2"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-anchor"></i>
+        <span>Free Boat Docking</span>
+      </div>
+      <h1 class="hero-title">Waterfront Dining on the <span>Indian River</span></h1>
+      <p class="hero-subtitle">Fresh seafood, stunning sunset views, and the best sports experience in Vero Beach. Your hometown restaurant on the water.</p>
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-utensils"></i> View Menu
+        </a>
+        <a href="https://goo.gl/maps/ifSVy84NvJL2" target="_blank" rel="noopener" class="btn btn-white btn-lg">
+          <i class="fa-solid fa-location-dot"></i> Get Directions
+        </a>
+      </div>
+      <div class="hero-features">
+        <div class="hero-feature">
+          <i class="fa-solid fa-clock"></i>
+          <span>Open Daily at 11am</span>
+        </div>
+        <div class="hero-feature">
+          <i class="fa-solid fa-tv"></i>
+          <span>35 HD TVs</span>
+        </div>
+        <div class="hero-feature">
+          <i class="fa-solid fa-champagne-glasses"></i>
+          <span>Happy Hour 4-7pm</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slideshow Indicators -->
+    <div class="hero-indicators">
+      <button class="hero-indicator active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-indicator" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-indicator" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#info-bar" class="scroll-indicator">
+      <div class="scroll-indicator-icon"></div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- Quick Info Bar -->
+  <section class="info-bar bg-secondary" id="info-bar">
+    <div class="container">
+      <div class="info-bar-content">
+        <div class="info-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Lunch 11am | Dinner 4pm | Sunday Brunch 10am</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:7722345550">772.234.5550</a>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>On the Indian River Lagoon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Highlights -->
+  <section class="section highlights" id="highlights">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Experience Riverside</h2>
+        <p>More than just a restaurant - it's a destination</p>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="highlight-card fade-in">
+          <div class="highlight-icon">
+            <i class="fa-solid fa-fish"></i>
+          </div>
+          <h3>Fresh Seafood</h3>
+          <p>From comfy finger foods to intimate semi-formal entrees of fresh fish and steaks, our menu has something for everyone.</p>
+        </div>
+
+        <div class="highlight-card fade-in">
+          <div class="highlight-icon">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <h3>Waterfront Views</h3>
+          <p>Spectacular sunset vistas across the Indian River Lagoon. The perfect backdrop for any dining occasion.</p>
+        </div>
+
+        <div class="highlight-card fade-in">
+          <div class="highlight-icon">
+            <i class="fa-solid fa-tv"></i>
+          </div>
+          <h3>Sports Central</h3>
+          <p>35 large HD TVs with BOSE sound, Direct TV NFL and College Football packages. Never miss a game.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dock & Dine -->
+  <section class="section dock-dine bg-white" id="dock-dine">
+    <div class="container">
+      <div class="dock-dine-content">
+        <div class="dock-dine-text fade-in">
+          <h2>Dock & Dine</h2>
+          <p>Arrive by boat and enjoy complimentary guest docking while you dine. We also offer monthly dock space rentals for those who want to make Riverside their regular stop.</p>
+          <ul class="dock-features">
+            <li><i class="fa-solid fa-check"></i> Free guest docking</li>
+            <li><i class="fa-solid fa-check"></i> Monthly rentals available</li>
+            <li><i class="fa-solid fa-check"></i> Easy access from the Indian River</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+        <div class="dock-dine-image fade-in">
+          <!-- Placeholder for dock image -->
+          <div class="image-placeholder">
+            <i class="fa-solid fa-sailboat"></i>
+            <span>Waterfront Image</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Preview -->
+  <section class="section events-preview" id="events-preview">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>What's Happening</h2>
+        <p>Live music, DJs, and special events every week</p>
+      </div>
+
+      <div class="events-grid">
+        <div class="event-card fade-in">
+          <div class="event-day">Every Day</div>
+          <h3>Happy Hour</h3>
+          <p class="event-time">4pm - 7pm</p>
+          <p>Drink specials and good vibes</p>
+        </div>
+
+        <div class="event-card fade-in">
+          <div class="event-day">Friday</div>
+          <h3>Live Music + DJ</h3>
+          <p class="event-time">5:30pm - Close</p>
+          <p>Live bands at 5:30, DJ at 10pm</p>
+        </div>
+
+        <div class="event-card fade-in">
+          <div class="event-day">Sunday</div>
+          <h3>Brunch Buffet</h3>
+          <p class="event-time">10am - 2pm</p>
+          <p>All you can eat + endless mimosas</p>
+        </div>
+      </div>
+
+      <div class="text-center fade-in" style="margin-top: var(--space-8);">
+        <a href="events.html" class="btn btn-outline">View Full Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta bg-primary" id="cta">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>Visit Us Today</h2>
+        <p>Walk-ins welcome - no reservations needed</p>
+        <a href="contact.html" class="btn btn-white btn-lg">
+          <i class="fa-solid fa-location-dot"></i> Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-secondary">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">Riverside Cafe</span>
+          <p>Waterfront dining on the Indian River Lagoon since the beginning.</p>
+          <p class="footer-dock"><i class="fa-solid fa-anchor"></i> Free Boat Docking</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:7722345550">772.234.5550</a></p>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@riversidecafe.com">info@riversidecafe.com</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> Vero Beach, FL</p>
+        </div>
+
+        <div class="footer-hours">
+          <h4>Hours</h4>
+          <p>Lunch: 11am</p>
+          <p>Dinner: 4pm</p>
+          <p>Sunday Brunch: 10am - 2pm</p>
+          <p class="footer-note">Walk-ins only</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Riverside Cafe. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
