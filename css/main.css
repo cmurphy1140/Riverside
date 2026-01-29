@@ -17,6 +17,26 @@ body {
   line-height: var(--leading-normal);
 }
 
+/* Skip Link (accessibility) */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  z-index: 10000;
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);

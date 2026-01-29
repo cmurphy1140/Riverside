@@ -3,19 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Riverside Cafe - Find us on the Indian River Lagoon in Vero Beach, FL. Get directions, hours, and contact information.">
+  <meta name="description" content="Contact Riverside Cafe - Find us on the Indian River Lagoon in Vero Beach, FL. Get directions by car or boat, hours, phone, and email.">
+  <meta name="keywords" content="Riverside Cafe contact, Vero Beach directions, Indian River Lagoon restaurant, boat docking Vero Beach">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Us | Riverside Cafe - Vero Beach, FL">
+  <meta property="og:description" content="Find us on the Indian River Lagoon. Get directions, hours, and contact info.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
 
   <title>Contact Us | Riverside Cafe - Vero Beach, FL</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/contact.css">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- Header -->
   <header class="header header--scrolled" id="header">
     <div class="nav-overlay" id="nav-overlay"></div>
@@ -52,17 +72,186 @@
   <section class="page-header">
     <div class="container">
       <h1>Contact Us</h1>
-      <p>Find us on the Indian River Lagoon</p>
+      <p>Find us on the Indian River Lagoon in Vero Beach, Florida</p>
     </div>
   </section>
 
-  <!-- Contact Content -->
-  <section class="section contact-section">
-    <div class="container">
-      <!-- Contact content will be built in Phase 10 -->
-      <p class="text-center text-light">Contact page coming soon...</p>
-    </div>
-  </section>
+  <main id="main">
+
+    <!-- Map Section -->
+    <section class="contact-map" id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.9!2d-80.37!3d27.64!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRiverside+Cafe!5e0!3m2!1sen!2sus!4v1"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Riverside Cafe location on Google Maps">
+      </iframe>
+    </section>
+
+    <!-- Contact Info + Form -->
+    <section class="section contact-main" id="contact-info">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Details -->
+          <div class="contact-details fade-in">
+            <h2>Get In Touch</h2>
+            <p class="contact-intro">We'd love to hear from you. Whether you have a question, want to plan a private event, or just want to say hello — reach out any time.</p>
+
+            <div class="contact-info-cards" data-stagger>
+              <div class="contact-info-card fade-in">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h3>Phone</h3>
+                  <a href="tel:7722345550">772.234.5550</a>
+                </div>
+              </div>
+
+              <div class="contact-info-card fade-in">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <h3>Email</h3>
+                  <a href="mailto:info@riversidecafe.com">info@riversidecafe.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-card fade-in">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h3>Address</h3>
+                  <p>Indian River Lagoon<br>Vero Beach, FL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap fade-in">
+            <h2>Send a Message</h2>
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Name <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Your name">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email <span class="required" aria-label="required">*</span></label>
+                <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="you@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone">Phone</label>
+                <input type="tel" id="contact-phone" name="phone" autocomplete="tel" placeholder="(555) 123-4567">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <select id="contact-subject" name="subject">
+                  <option value="">Select a topic...</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="events">Private Events</option>
+                  <option value="docking">Dock Rentals</option>
+                  <option value="catering">Catering</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="contact-message">Message <span class="required" aria-label="required">*</span></label>
+                <textarea id="contact-message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+              </div>
+
+              <div class="form-group form-group--full">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours & Directions -->
+    <section class="section contact-details-section bg-light" id="hours-directions">
+      <div class="container">
+        <div class="contact-details-grid" data-stagger>
+
+          <!-- Hours -->
+          <div class="contact-detail-block fade-in">
+            <div class="contact-detail-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <h3>Hours of Operation</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <th scope="row">Lunch</th>
+                  <td>11:00 AM daily</td>
+                </tr>
+                <tr>
+                  <th scope="row">Dinner</th>
+                  <td>4:00 PM daily</td>
+                </tr>
+                <tr class="hours-highlight">
+                  <th scope="row">Sunday Brunch</th>
+                  <td>10:00 AM &ndash; 2:00 PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Happy Hour</th>
+                  <td>4:00 PM &ndash; 7:00 PM daily</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="contact-detail-note"><i class="fa-solid fa-circle-info"></i> Walk-ins only &mdash; no reservations needed</p>
+          </div>
+
+          <!-- By Car -->
+          <div class="contact-detail-block fade-in">
+            <div class="contact-detail-icon">
+              <i class="fa-solid fa-car"></i>
+            </div>
+            <h3>Directions by Car</h3>
+            <p>Located on the Indian River Lagoon in Vero Beach, Florida. Easily accessible from US-1 and the Vero Beach area.</p>
+            <p>Free parking is available on-site for all guests.</p>
+            <a href="https://goo.gl/maps/ifSVy84NvJL2" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: var(--space-4);">
+              <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
+            </a>
+          </div>
+
+          <!-- By Boat -->
+          <div class="contact-detail-block fade-in">
+            <div class="contact-detail-icon">
+              <i class="fa-solid fa-sailboat"></i>
+            </div>
+            <h3>Directions by Boat</h3>
+            <p>Accessible directly from the Indian River Lagoon (Intracoastal Waterway). Look for our dock on the west shore.</p>
+            <ul class="contact-boat-features">
+              <li><i class="fa-solid fa-check"></i> Free guest docking while you dine</li>
+              <li><i class="fa-solid fa-check"></i> Monthly dock space rentals available</li>
+              <li><i class="fa-solid fa-check"></i> Well-lit dock area for evening arrivals</li>
+            </ul>
+            <a href="contact.html#contact-info" class="btn btn-outline" style="margin-top: var(--space-4);">
+              <i class="fa-solid fa-anchor"></i> Inquire About Dock Rentals
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer bg-secondary">
