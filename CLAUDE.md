@@ -20,7 +20,8 @@ riverside/
 ├── gallery.html            # Photo gallery (filter tabs, lightbox, 18 items)
 ├── contact.html            # Contact page (map, form, hours, directions)
 ├── 404.html                # Custom error page
-├── netlify.toml            # Deployment config (redirects, headers, caching)
+├── vercel.json             # Vercel deployment config (headers, caching)
+├── netlify.toml            # Netlify deployment config (redirects, headers, caching)
 ├── css/
 │   ├── variables.css       # Design tokens (colors, spacing, typography)
 │   ├── reset.css           # CSS reset/normalize
@@ -78,14 +79,15 @@ python -m http.server 8000
 
 ## Deployment
 ```bash
-# Deploy to Netlify
-netlify deploy --prod
+# Deploy to Vercel (preferred)
+vercel --prod
 
-# Or drag-and-drop the project folder at netlify.com
+# Or deploy to Netlify
+netlify deploy --prod
 ```
 
-The `netlify.toml` configures:
-- Custom 404 page redirect
+The `vercel.json` / `netlify.toml` configure:
+- Clean URLs (drop .html extensions on Vercel)
 - Security headers (X-Frame-Options, X-Content-Type-Options, Referrer-Policy)
 - Cache headers for static assets (CSS, JS, images)
 
