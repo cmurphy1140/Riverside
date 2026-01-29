@@ -1,0 +1,439 @@
+/* ==========================================================================
+   Menu Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Menu Category Navigation (sticky bar)
+   -------------------------------------------------------------------------- */
+
+.menu-nav {
+  position: sticky;
+  top: 80px;
+  z-index: var(--z-dropdown);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-neutral);
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: var(--space-3) 0;
+}
+
+.menu-nav-list::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-nav-link {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-light);
+  white-space: nowrap;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.menu-nav-link:hover {
+  color: var(--color-primary);
+  background-color: rgba(245, 88, 30, 0.08);
+}
+
+.menu-nav-link.active {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 639px) {
+  .menu-nav {
+    top: 70px;
+  }
+
+  .menu-nav-list {
+    gap: 0;
+    padding: var(--space-2) 0;
+  }
+
+  .menu-nav-link {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-xs);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Menu Category Header
+   -------------------------------------------------------------------------- */
+
+.menu-category-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.menu-category-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--text-2xl);
+}
+
+.menu-category-header h2 {
+  margin-bottom: var(--space-2);
+}
+
+.menu-category-header p {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   Menu Grid (standard items)
+   -------------------------------------------------------------------------- */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.menu-item {
+  display: flex;
+  gap: var(--space-4);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.menu-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.menu-item-image {
+  flex-shrink: 0;
+  width: 120px;
+}
+
+.menu-item-image .image-placeholder {
+  height: 100%;
+  min-height: 120px;
+  border-radius: 0;
+  font-size: var(--text-lg);
+}
+
+.menu-item-info {
+  padding: var(--space-4) var(--space-4) var(--space-4) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2);
+}
+
+.menu-item-header h3 {
+  font-size: var(--text-lg);
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+}
+
+.menu-item-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+}
+
+/* --------------------------------------------------------------------------
+   Menu Badges (Popular, Dietary)
+   -------------------------------------------------------------------------- */
+
+.menu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px var(--space-2);
+  font-size: 11px;
+  font-weight: var(--font-bold);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.menu-badge--popular {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.menu-badge--dietary {
+  background-color: rgba(34, 139, 34, 0.12);
+  color: #228b22;
+}
+
+/* --------------------------------------------------------------------------
+   Feature Card (Catch of the Day)
+   -------------------------------------------------------------------------- */
+
+.menu-feature-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.menu-feature-image .image-placeholder {
+  height: 100%;
+  min-height: 300px;
+  border-radius: 0;
+}
+
+.menu-feature-info {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-feature-info h3 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.menu-feature-info .menu-item-desc {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-6);
+}
+
+.menu-prep-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.menu-prep-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+}
+
+.menu-prep-list i {
+  color: var(--color-primary);
+  width: 20px;
+  text-align: center;
+}
+
+.menu-feature-note {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-medium);
+}
+
+.menu-feature-note i {
+  margin-right: var(--space-1);
+}
+
+/* --------------------------------------------------------------------------
+   Desserts Grid (3-column)
+   -------------------------------------------------------------------------- */
+
+.menu-grid--desserts {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.menu-item--dessert {
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-item--dessert .menu-item-image {
+  width: 100%;
+}
+
+.menu-item--dessert .menu-item-image .image-placeholder {
+  min-height: 160px;
+}
+
+.menu-item--dessert .menu-item-info {
+  padding: var(--space-4);
+}
+
+.menu-item--dessert .menu-item-header {
+  justify-content: center;
+}
+
+.menu-item--dessert .menu-item-desc {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Menu Footer CTA
+   -------------------------------------------------------------------------- */
+
+.menu-footer-cta {
+  padding: var(--space-12) 0;
+}
+
+.menu-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.menu-footer-text h3 {
+  color: var(--color-white);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.menu-footer-text p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-footer-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive - Tablet
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-grid--desserts {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .menu-item--dessert {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .menu-item--dessert .menu-item-image {
+    width: 120px;
+  }
+
+  .menu-item--dessert .menu-item-header {
+    justify-content: flex-start;
+  }
+
+  .menu-item--dessert .menu-item-desc {
+    text-align: left;
+  }
+
+  .menu-feature-card {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-feature-image .image-placeholder {
+    min-height: 200px;
+  }
+
+  .menu-feature-info {
+    padding: var(--space-6);
+  }
+
+  .menu-footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-footer-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive - Mobile
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 639px) {
+  .menu-category-icon {
+    width: 52px;
+    height: 52px;
+    font-size: var(--text-xl);
+  }
+
+  .menu-category-header h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .menu-item {
+    flex-direction: column;
+  }
+
+  .menu-item-image {
+    width: 100%;
+  }
+
+  .menu-item-image .image-placeholder {
+    min-height: 140px;
+  }
+
+  .menu-item-info {
+    padding: var(--space-4);
+  }
+
+  .menu-item--dessert {
+    flex-direction: column;
+  }
+
+  .menu-item--dessert .menu-item-image {
+    width: 100%;
+  }
+
+  .menu-item--dessert .menu-item-info {
+    text-align: center;
+  }
+
+  .menu-item--dessert .menu-item-header {
+    justify-content: center;
+  }
+
+  .menu-item--dessert .menu-item-desc {
+    text-align: center;
+  }
+
+  .menu-feature-info h3 {
+    font-size: var(--text-2xl);
+  }
+
+  .menu-prep-list {
+    grid-template-columns: 1fr;
+  }
+}

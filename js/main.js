@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (entry.isIntersecting) {
           // Add staggered delay for cards in grids
           const parent = entry.target.parentElement;
-          if (parent && (parent.classList.contains('highlights-grid') || parent.classList.contains('events-grid'))) {
+          if (parent && (parent.classList.contains('highlights-grid') || parent.classList.contains('events-grid') || parent.classList.contains('menu-grid') || parent.classList.contains('atmosphere-grid'))) {
             const siblings = Array.from(parent.children);
             const index = siblings.indexOf(entry.target);
             entry.target.style.transitionDelay = (index * 0.15) + 's';
@@ -228,5 +228,57 @@ document.addEventListener('DOMContentLoaded', function() {
       link.classList.remove('active');
     }
   });
+
+  // ==========================================================================
+  // Menu Page - Category Scroll Spy
+  // ==========================================================================
+
+  const menuNavLinks = document.querySelectorAll('.menu-nav-link');
+  const menuCategories = document.querySelectorAll('.menu-category');
+
+  if (menuNavLinks.length > 0 && menuCategories.length > 0) {
+    function updateMenuNav() {
+      var scrollPos = window.scrollY;
+      var headerOffset = header ? header.offsetHeight : 80;
+      var menuNavHeight = 50;
+      var offset = headerOffset + menuNavHeight + 40;
+
+      var activeId = '';
+      menuCategories.forEach(function(section) {
+        var top = section.offsetTop - offset;
+        var bottom = top + section.offsetHeight;
+        if (scrollPos >= top && scrollPos < bottom) {
+          activeId = section.getAttribute('id');
+        }
+      });
+
+      if (activeId) {
+        menuNavLinks.forEach(function(link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + activeId) {
+            link.classList.add('active');
+          }
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateMenuNav);
+    updateMenuNav();
+
+    // Smooth scroll for menu nav links (with offset for sticky nav)
+    menuNavLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var targetId = this.getAttribute('href');
+        var target = document.querySelector(targetId);
+        if (target) {
+          var headerOffset = header ? header.offsetHeight : 80;
+          var menuNavHeight = 50;
+          var targetPos = target.getBoundingClientRect().top + window.scrollY - headerOffset - menuNavHeight;
+          window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        }
+      });
+    });
+  }
 
 });

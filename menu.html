@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Riverside Cafe Menu - Fresh seafood, steaks, salads, and more. View our full menu of waterfront dining options in Vero Beach, FL.">
+  <meta name="keywords" content="Riverside Cafe menu, Vero Beach seafood, waterfront dining menu, Indian River Lagoon restaurant">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Menu | Riverside Cafe - Vero Beach, FL">
+  <meta property="og:description" content="Fresh seafood, steaks, salads, and more. View our full waterfront dining menu.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
 
   <title>Menu | Riverside Cafe - Vero Beach, FL</title>
 
@@ -19,6 +26,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/menu.css">
 </head>
 <body>
   <!-- Header -->
@@ -57,17 +65,388 @@
   <section class="page-header">
     <div class="container">
       <h1>Our Menu</h1>
-      <p>From comfy finger foods to intimate semi-formal entrees</p>
+      <p>From comfy finger foods to intimate semi-formal entrees of fresh fish and steaks</p>
     </div>
   </section>
 
-  <!-- Menu Content -->
-  <section class="section menu-section">
+  <!-- Menu Navigation -->
+  <nav class="menu-nav" id="menu-nav" aria-label="Menu categories">
     <div class="container">
-      <!-- Menu content will be built in Phase 6 -->
-      <p class="text-center text-light">Menu content coming soon...</p>
+      <ul class="menu-nav-list">
+        <li><a href="#appetizers" class="menu-nav-link active">Appetizers</a></li>
+        <li><a href="#salads" class="menu-nav-link">Salads</a></li>
+        <li><a href="#sandwiches" class="menu-nav-link">Sandwiches</a></li>
+        <li><a href="#fresh-catch" class="menu-nav-link">Fresh Catch</a></li>
+        <li><a href="#entrees" class="menu-nav-link">Entrees</a></li>
+        <li><a href="#steaks" class="menu-nav-link">Steaks</a></li>
+        <li><a href="#desserts" class="menu-nav-link">Desserts</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
+
+  <!-- Menu Content -->
+  <main class="menu-content">
+
+    <!-- Appetizers -->
+    <section class="menu-category section" id="appetizers">
+      <div class="container">
+        <div class="menu-category-header fade-in">
+          <div class="menu-category-icon">
+            <i class="fa-solid fa-plate-wheat"></i>
+          </div>
+          <h2>Appetizers</h2>
+          <p>Start your meal with something special</p>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-pepper-hot"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Oysters Rockefeller</h3>
+              </div>
+              <p class="menu-item-desc">Fresh oysters baked with spinach and Italian cheeses. A Riverside classic.</p>
+            </div>
+          </div>
+
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-ring"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Famous Onion Rings</h3>
+                <span class="menu-badge menu-badge--popular">Popular</span>
+              </div>
+              <p class="menu-item-desc">Our legendary hand-battered onion rings. Crispy, golden, and piled high.</p>
+            </div>
+          </div>
+
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-fish"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Yellowfin Tuna Nachos</h3>
+              </div>
+              <p class="menu-item-desc">Seared yellowfin tuna atop crispy wonton chips with wasabi cream and fresh toppings.</p>
+            </div>
+          </div>
+
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-shrimp"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Fresh Mussels</h3>
+              </div>
+              <p class="menu-item-desc">Steamed fresh mussels in a savory white wine garlic sauce, served with crusty bread.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Salads -->
+    <section class="menu-category section bg-light" id="salads">
+      <div class="container">
+        <div class="menu-category-header fade-in">
+          <div class="menu-category-icon">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h2>Salads</h2>
+          <p>Fresh, crisp, and made to order</p>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-bowl-food"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>House Salad</h3>
+              </div>
+              <p class="menu-item-desc">Grilled chicken breast over mixed greens with crumbled feta cheese and honey balsamic dressing.</p>
+            </div>
+          </div>
+
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-lemon"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Greek Salad</h3>
+                <span class="menu-badge menu-badge--dietary"><i class="fa-solid fa-seedling"></i> V</span>
+              </div>
+              <p class="menu-item-desc">Crisp romaine, tomatoes, cucumbers, red onion, Kalamata olives, and feta with Greek vinaigrette.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sandwiches -->
+    <section class="menu-category section" id="sandwiches">
+      <div class="container">
+        <div class="menu-category-header fade-in">
+          <div class="menu-category-icon">
+            <i class="fa-solid fa-bread-slice"></i>
+          </div>
+          <h2>Sandwiches</h2>
+          <p>Classic favorites done right</p>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-burger"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Grouper Reuben</h3>
+                <span class="menu-badge menu-badge--popular">Popular</span>
+              </div>
+              <p class="menu-item-desc">Fresh grouper on toasted rye with Swiss cheese, sauerkraut, and Thousand Island dressing.</p>
+            </div>
+          </div>
+
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-fish"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Fish Tacos</h3>
+              </div>
+              <p class="menu-item-desc">Seasoned fresh fish in soft flour tortillas with shredded cabbage, pico de gallo, and chipotle crema.</p>
+            </div>
+          </div>
+
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-drumstick-bite"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Chicken Tacos</h3>
+              </div>
+              <p class="menu-item-desc">Grilled chicken in soft flour tortillas with fresh toppings, shredded lettuce, and house-made salsa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fresh Catch -->
+    <section class="menu-category section bg-light" id="fresh-catch">
+      <div class="container">
+        <div class="menu-category-header fade-in">
+          <div class="menu-category-icon">
+            <i class="fa-solid fa-anchor"></i>
+          </div>
+          <h2>Fresh Catch</h2>
+          <p>Straight from the water to your plate</p>
+        </div>
+
+        <div class="menu-feature-card fade-in">
+          <div class="menu-feature-image">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-fish-fins"></i>
+              <span>Fresh Catch Photo</span>
+            </div>
+          </div>
+          <div class="menu-feature-info">
+            <h3>Catch of the Day</h3>
+            <p class="menu-item-desc">Ask your server about today's fresh catch, sourced from local waters. Prepared your way:</p>
+            <ul class="menu-prep-list">
+              <li><i class="fa-solid fa-fire-burner"></i> Grilled</li>
+              <li><i class="fa-solid fa-pepper-hot"></i> Blackened</li>
+              <li><i class="fa-solid fa-fire"></i> Broiled</li>
+              <li><i class="fa-solid fa-oil-can"></i> Fried</li>
+            </ul>
+            <p class="menu-feature-note"><i class="fa-solid fa-circle-info"></i> Ask your server for today's selection and market price</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seafood Entrees -->
+    <section class="menu-category section" id="entrees">
+      <div class="container">
+        <div class="menu-category-header fade-in">
+          <div class="menu-category-icon">
+            <i class="fa-solid fa-shrimp"></i>
+          </div>
+          <h2>Seafood Entrees</h2>
+          <p>The best of the Indian River Lagoon and beyond</p>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-fish"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Grilled Mahi</h3>
+                <span class="menu-badge menu-badge--dietary"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i> GF</span>
+              </div>
+              <p class="menu-item-desc">Fresh mahi-mahi grilled to perfection, topped with vine-ripened tomatoes and fresh mozzarella.</p>
+            </div>
+          </div>
+
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-fish-fins"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Fish and Chips</h3>
+              </div>
+              <p class="menu-item-desc">Beer-battered fresh fish fried golden, served with crispy fries, coleslaw, and house-made tartar sauce.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steaks -->
+    <section class="menu-category section bg-light" id="steaks">
+      <div class="container">
+        <div class="menu-category-header fade-in">
+          <div class="menu-category-icon">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <h2>Steaks</h2>
+          <p>Grilled over open flame</p>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-item fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-drumstick-bite"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Grilled Skirt Steak</h3>
+                <span class="menu-badge menu-badge--dietary"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i> GF</span>
+              </div>
+              <p class="menu-item-desc">Tender grilled skirt steak served with sautéed onions and mushrooms. Cooked to your preferred doneness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desserts -->
+    <section class="menu-category section" id="desserts">
+      <div class="container">
+        <div class="menu-category-header fade-in">
+          <div class="menu-category-icon">
+            <i class="fa-solid fa-ice-cream"></i>
+          </div>
+          <h2>Desserts</h2>
+          <p>The sweetest way to end your meal</p>
+        </div>
+
+        <div class="menu-grid menu-grid--desserts">
+          <div class="menu-item menu-item--dessert fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-fire-burner"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Crème Brûlée</h3>
+              </div>
+              <p class="menu-item-desc">Classic vanilla custard with a perfectly caramelized sugar crust.</p>
+            </div>
+          </div>
+
+          <div class="menu-item menu-item--dessert fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-lemon"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Key Lime Pie</h3>
+                <span class="menu-badge menu-badge--popular">Popular</span>
+              </div>
+              <p class="menu-item-desc">Tangy key lime filling in a graham cracker crust topped with whipped cream. A Florida favorite.</p>
+            </div>
+          </div>
+
+          <div class="menu-item menu-item--dessert fade-in">
+            <div class="menu-item-image">
+              <div class="image-placeholder">
+                <i class="fa-solid fa-cake-candles"></i>
+              </div>
+            </div>
+            <div class="menu-item-info">
+              <div class="menu-item-header">
+                <h3>Chocolate Cake</h3>
+              </div>
+              <p class="menu-item-desc">Rich, decadent chocolate layer cake with a velvety ganache finish.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Note / PDF Download -->
+    <section class="menu-footer-cta bg-secondary">
+      <div class="container">
+        <div class="menu-footer-content fade-in">
+          <div class="menu-footer-text">
+            <h3>Want to see the full menu?</h3>
+            <p>Prices and specials change seasonally. Ask your server about today's features and daily specials.</p>
+          </div>
+          <div class="menu-footer-actions">
+            <a href="#" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF Menu
+            </a>
+            <a href="tel:7722345550" class="btn btn-white btn-lg">
+              <i class="fa-solid fa-phone"></i> Call for Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer bg-secondary">
