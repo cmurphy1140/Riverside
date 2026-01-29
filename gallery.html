@@ -3,19 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Riverside Cafe Photo Gallery - See our waterfront views, delicious food, and friendly staff at Vero Beach's favorite restaurant.">
+  <meta name="description" content="Riverside Cafe Photo Gallery - Waterfront views, delicious cuisine, and friendly staff at Vero Beach's favorite restaurant on the Indian River Lagoon.">
+  <meta name="keywords" content="Riverside Cafe gallery, Vero Beach photos, waterfront restaurant, Indian River Lagoon, food photography">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Photo Gallery | Riverside Cafe - Vero Beach, FL">
+  <meta property="og:description" content="See our waterfront views, delicious cuisine, and friendly team at Riverside Cafe.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
 
   <title>Gallery | Riverside Cafe - Vero Beach, FL</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/gallery.css">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- Header -->
   <header class="header header--scrolled" id="header">
     <div class="nav-overlay" id="nav-overlay"></div>
@@ -52,17 +73,272 @@
   <section class="page-header">
     <div class="container">
       <h1>Photo Gallery</h1>
-      <p>Sunsets, food, and good times on the water</p>
+      <p>Sunsets, seafood, and good times on the Indian River Lagoon</p>
     </div>
   </section>
 
-  <!-- Gallery Content -->
-  <section class="section gallery-section">
-    <div class="container">
-      <!-- Gallery content will be built in Phase 9 -->
-      <p class="text-center text-light">Photo gallery coming soon...</p>
+  <main id="main">
+
+    <!-- Gallery Filter + Grid -->
+    <section class="section gallery-main" id="gallery">
+      <div class="container">
+
+        <!-- Category Filter Tabs -->
+        <div class="gallery-filters fade-in" role="tablist" aria-label="Gallery categories">
+          <button class="gallery-filter active" data-filter="all" role="tab" aria-selected="true">
+            <i class="fa-solid fa-grip"></i> All
+          </button>
+          <button class="gallery-filter" data-filter="scenic" role="tab" aria-selected="false">
+            <i class="fa-solid fa-sun"></i> Scenic
+          </button>
+          <button class="gallery-filter" data-filter="cuisine" role="tab" aria-selected="false">
+            <i class="fa-solid fa-utensils"></i> Cuisine
+          </button>
+          <button class="gallery-filter" data-filter="staff" role="tab" aria-selected="false">
+            <i class="fa-solid fa-users"></i> Staff
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="gallery-grid" data-stagger>
+
+          <!-- Scenic / General -->
+          <div class="gallery-item" data-category="scenic" tabindex="0" role="button" aria-label="Sunset over the Indian River Lagoon">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-sun"></i>
+              <span>Sunset 1</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Scenic</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" tabindex="0" role="button" aria-label="Oysters Rockefeller appetizer">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-plate-wheat"></i>
+              <span>Oysters</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Cuisine</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="staff" tabindex="0" role="button" aria-label="Bartender crafting cocktails">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-user"></i>
+              <span>Bartender</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Staff</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="scenic" tabindex="0" role="button" aria-label="Waterfront view from the patio">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-water"></i>
+              <span>Waterfront</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Scenic</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" tabindex="0" role="button" aria-label="Grilled Mahi with fresh mozzarella">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-fish"></i>
+              <span>Grilled Mahi</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Cuisine</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" tabindex="0" role="button" aria-label="Famous onion rings">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-ring"></i>
+              <span>Onion Rings</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Cuisine</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="staff" tabindex="0" role="button" aria-label="Kitchen crew at work">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-user"></i>
+              <span>Kitchen Crew</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Staff</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="scenic" tabindex="0" role="button" aria-label="Sunset panorama">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-panorama"></i>
+              <span>Panorama</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Scenic</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" tabindex="0" role="button" aria-label="Yellowfin tuna nachos">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-shrimp"></i>
+              <span>Tuna Nachos</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Cuisine</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="staff" tabindex="0" role="button" aria-label="Server team on the patio">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-users"></i>
+              <span>Server Team</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Staff</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" tabindex="0" role="button" aria-label="Key lime pie dessert">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-lemon"></i>
+              <span>Key Lime Pie</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Cuisine</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="scenic" tabindex="0" role="button" aria-label="Dock at sunset">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-sailboat"></i>
+              <span>Dock View</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Scenic</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" tabindex="0" role="button" aria-label="Fish tacos platter">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-fish"></i>
+              <span>Fish Tacos</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Cuisine</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="staff" tabindex="0" role="button" aria-label="Staff group photo">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-user-group"></i>
+              <span>Team Photo</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Staff</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="scenic" tabindex="0" role="button" aria-label="Evening waterfront dining">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-moon"></i>
+              <span>Evening View</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Scenic</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" tabindex="0" role="button" aria-label="Crème brûlée dessert">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-fire-burner"></i>
+              <span>Crème Brûlée</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Cuisine</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="scenic" tabindex="0" role="button" aria-label="Indian River Lagoon scenic view">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-water"></i>
+              <span>Lagoon</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Scenic</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" tabindex="0" role="button" aria-label="Fresh mussels in white wine">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-bowl-food"></i>
+              <span>Mussels</span>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Cuisine</span>
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Photo Credit -->
+        <p class="gallery-credit fade-in">Food photography by Austin Russell Photography</p>
+
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+      <button class="lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="lightbox-content" id="lightbox-content">
+        <div class="lightbox-image" id="lightbox-image">
+          <!-- Placeholder shown in lightbox -->
+        </div>
+      </div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
     </div>
-  </section>
+
+    <!-- Wallpapers CTA -->
+    <section class="gallery-wallpapers bg-secondary">
+      <div class="container">
+        <div class="gallery-wallpapers-content fade-in">
+          <div class="gallery-wallpapers-text">
+            <h3>Desktop Wallpapers</h3>
+            <p>Take a piece of the Riverside sunset home. Download free widescreen desktop wallpapers of our waterfront views.</p>
+          </div>
+          <a href="#" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-download"></i> Download Wallpapers
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer bg-secondary">

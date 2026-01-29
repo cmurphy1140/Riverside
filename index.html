@@ -14,9 +14,15 @@
 
   <title>Riverside Cafe | Waterfront Dining in Vero Beach, FL</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -29,6 +35,8 @@
   <link rel="stylesheet" href="css/components/hero.css">
 </head>
 <body>
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="nav-overlay" id="nav-overlay"></div>
@@ -134,7 +142,7 @@
       <div class="info-bar-content">
         <div class="info-item">
           <i class="fa-solid fa-clock"></i>
-          <span>Lunch 11am | Dinner 4pm | Sunday Brunch 10am</span>
+          <span>Lunch 11am | Dinner 4pm | Sunday Brunch 10am - 2pm</span>
         </div>
         <div class="info-item">
           <i class="fa-solid fa-phone"></i>
@@ -156,7 +164,7 @@
         <p>More than just a restaurant - it's a destination</p>
       </div>
 
-      <div class="highlights-grid">
+      <div class="highlights-grid" data-stagger>
         <div class="highlight-card fade-in">
           <div class="highlight-icon">
             <i class="fa-solid fa-fish"></i>
@@ -209,6 +217,65 @@
     </div>
   </section>
 
+  <!-- Atmosphere Gallery -->
+  <section class="section atmosphere" id="atmosphere">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>The Riverside Experience</h2>
+        <p>Sun, water, and great food — see what's waiting for you</p>
+      </div>
+
+      <div class="atmosphere-grid" data-stagger>
+        <div class="atmosphere-item atmosphere-item--wide fade-in">
+          <div class="image-placeholder">
+            <i class="fa-solid fa-sun"></i>
+            <span>Waterfront Sunset</span>
+          </div>
+          <div class="atmosphere-label">Sunset Views</div>
+        </div>
+        <div class="atmosphere-item fade-in">
+          <div class="image-placeholder">
+            <i class="fa-solid fa-couch"></i>
+            <span>Interior Dining</span>
+          </div>
+          <div class="atmosphere-label">Indoor Dining</div>
+        </div>
+        <div class="atmosphere-item fade-in">
+          <div class="image-placeholder">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <span>Outdoor Patio</span>
+          </div>
+          <div class="atmosphere-label">Outdoor Seating</div>
+        </div>
+        <div class="atmosphere-item fade-in">
+          <div class="image-placeholder">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Fresh Dishes</span>
+          </div>
+          <div class="atmosphere-label">Fresh Cuisine</div>
+        </div>
+        <div class="atmosphere-item fade-in">
+          <div class="image-placeholder">
+            <i class="fa-solid fa-tv"></i>
+            <span>Sports Bar</span>
+          </div>
+          <div class="atmosphere-label">Sports Bar</div>
+        </div>
+        <div class="atmosphere-item fade-in">
+          <div class="image-placeholder">
+            <i class="fa-solid fa-sailboat"></i>
+            <span>Dock Access</span>
+          </div>
+          <div class="atmosphere-label">Boat Docking</div>
+        </div>
+      </div>
+
+      <div class="text-center fade-in" style="margin-top: var(--space-8);">
+        <a href="gallery.html" class="btn btn-outline">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Upcoming Events Preview -->
   <section class="section events-preview" id="events-preview">
     <div class="container">
@@ -217,7 +284,7 @@
         <p>Live music, DJs, and special events every week</p>
       </div>
 
-      <div class="events-grid">
+      <div class="events-grid" data-stagger>
         <div class="event-card fade-in">
           <div class="event-day">Every Day</div>
           <h3>Happy Hour</h3>

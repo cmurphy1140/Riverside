@@ -13,19 +13,31 @@ Modern, responsive website redesign for Riverside Cafe - a waterfront restaurant
 ## Project Structure
 ```
 riverside/
-├── index.html          # Homepage
-├── menu.html           # Menu page
-├── about.html          # About/Restaurant page
-├── events.html         # Events/Calendar page
-├── gallery.html        # Photo gallery
-├── contact.html        # Contact page
+├── index.html              # Homepage (hero slideshow, highlights, atmosphere, events, CTA)
+├── menu.html               # Menu page (7 categories, sticky nav, scroll-spy)
+├── about.html              # About page (history, features, team, gallery)
+├── events.html             # Events page (weekly lineup, upcoming, sports, specials)
+├── gallery.html            # Photo gallery (filter tabs, lightbox, 18 items)
+├── contact.html            # Contact page (map, form, hours, directions)
+├── 404.html                # Custom error page
+├── vercel.json             # Vercel deployment config (headers, caching)
+├── netlify.toml            # Netlify deployment config (redirects, headers, caching)
 ├── css/
-│   ├── variables.css   # Design tokens (colors, spacing, typography)
-│   ├── reset.css       # CSS reset/normalize
-│   └── main.css        # Main styles
+│   ├── variables.css       # Design tokens (colors, spacing, typography)
+│   ├── reset.css           # CSS reset/normalize
+│   ├── main.css            # Base styles, utilities, shared components
+│   └── components/
+│       ├── header.css      # Header & navigation
+│       ├── hero.css        # Hero slideshow
+│       ├── menu.css        # Menu page layout
+│       ├── about.css       # About page layout
+│       ├── events.css      # Events page layout
+│       ├── gallery.css     # Gallery grid & lightbox
+│       └── contact.css     # Contact form & details
 ├── js/
-│   └── main.js         # JavaScript (mobile nav, scroll effects)
-└── images/             # Image assets
+│   └── main.js             # All JS (nav, slideshow, scroll-spy, gallery, lightbox)
+└── images/
+    └── favicon.svg         # Site favicon
 ```
 
 ## Brand Colors
@@ -65,5 +77,25 @@ python -m http.server 8000
 - Semantic HTML5 elements
 - Accessible markup (ARIA where needed)
 
+## Deployment
+```bash
+# Deploy to Vercel (preferred)
+vercel --prod
+
+# Or deploy to Netlify
+netlify deploy --prod
+```
+
+The `vercel.json` / `netlify.toml` configure:
+- Clean URLs (drop .html extensions on Vercel)
+- Security headers (X-Frame-Options, X-Content-Type-Options, Referrer-Policy)
+- Cache headers for static assets (CSS, JS, images)
+
 ## Current Status
-Phase 1 complete - Project skeleton with design system established.
+All 12 phases complete. Site is production-ready with:
+- 7 fully built pages (Home, Menu, About, Events, Gallery, Contact, 404)
+- Responsive design (mobile-first, breakpoints at 639px and 1023px)
+- Accessibility: skip-nav links, ARIA roles, semantic HTML, keyboard navigation
+- SEO: meta descriptions, keywords, Open Graph tags, favicons on all pages
+- Interactive features: hero slideshow, gallery lightbox with filtering, menu scroll-spy, fade-in animations
+- Image placeholders ready for real photography

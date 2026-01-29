@@ -1,0 +1,417 @@
+/* ==========================================================================
+   Events Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Weekly Schedule Grid
+   -------------------------------------------------------------------------- */
+
+.events-weekly-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.weekly-card {
+  display: flex;
+  gap: var(--space-5);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.weekly-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.weekly-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-primary);
+}
+
+.weekly-card--featured .weekly-card-accent {
+  width: 5px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
+}
+
+.weekly-card-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xl);
+}
+
+.weekly-card--featured .weekly-card-icon {
+  background-color: var(--color-primary);
+}
+
+.weekly-card-when {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.weekly-card-info h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+.weekly-card-time {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.weekly-card-time i {
+  color: var(--color-primary);
+  margin-right: var(--space-1);
+}
+
+.weekly-card-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+}
+
+.weekly-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: var(--space-3);
+  padding: var(--space-1) var(--space-3);
+  background-color: rgba(245, 88, 30, 0.1);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: var(--font-bold);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 1023px) {
+  .events-weekly-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .weekly-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-5);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Upcoming Events List
+   -------------------------------------------------------------------------- */
+
+.events-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.event-list-item {
+  display: flex;
+  gap: var(--space-6);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.event-list-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.event-list-item--highlight {
+  border-left: 4px solid var(--color-primary);
+}
+
+.event-list-date {
+  flex-shrink: 0;
+  width: 72px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-list-month {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+.event-list-day {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+  margin-top: 2px;
+}
+
+.event-list-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.event-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px var(--space-2);
+  font-size: 11px;
+  font-weight: var(--font-bold);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.event-type--music {
+  background-color: rgba(147, 51, 234, 0.1);
+  color: #7c3aed;
+}
+
+.event-type--dj {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+}
+
+.event-type--special {
+  background-color: rgba(245, 88, 30, 0.1);
+  color: var(--color-primary);
+}
+
+.event-list-time {
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+}
+
+.event-list-time i {
+  margin-right: 2px;
+}
+
+.event-list-info h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-1);
+}
+
+.event-list-info p {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 639px) {
+  .event-list-item {
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .event-list-date {
+    width: auto;
+    flex-direction: row;
+    gap: var(--space-2);
+    text-align: left;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sports Viewing Section
+   -------------------------------------------------------------------------- */
+
+.events-sports-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.events-sports-text h2 {
+  margin-bottom: var(--space-4);
+}
+
+.events-sports-text > p {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-6);
+  line-height: var(--leading-relaxed);
+}
+
+.events-sports-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.events-sports-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.events-sports-features li i {
+  color: var(--color-primary);
+  width: 24px;
+  text-align: center;
+}
+
+.events-sports-image .image-placeholder {
+  height: 400px;
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 1023px) {
+  .events-sports-content {
+    grid-template-columns: 1fr;
+  }
+
+  .events-sports-image {
+    order: -1;
+  }
+
+  .events-sports-image .image-placeholder {
+    height: 300px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Special Events Grid
+   -------------------------------------------------------------------------- */
+
+.events-specials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.special-card {
+  text-align: center;
+  padding: var(--space-6);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.special-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.special-card-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xl);
+}
+
+.special-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.special-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 1023px) {
+  .events-specials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .events-specials-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Private Events CTA
+   -------------------------------------------------------------------------- */
+
+.events-private {
+  padding: var(--space-16) 0;
+}
+
+.events-private-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.events-private-text h2 {
+  color: var(--color-white);
+  margin-bottom: var(--space-3);
+}
+
+.events-private-text p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 560px;
+}
+
+.events-private-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1023px) {
+  .events-private-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .events-private-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}
