@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (entry.isIntersecting) {
           // Add staggered delay for cards in grids
           const parent = entry.target.parentElement;
-          if (parent && (parent.classList.contains('highlights-grid') || parent.classList.contains('events-grid') || parent.classList.contains('menu-grid') || parent.classList.contains('atmosphere-grid'))) {
+          if (parent && (parent.classList.contains('highlights-grid') || parent.classList.contains('events-grid') || parent.classList.contains('menu-grid') || parent.classList.contains('atmosphere-grid') || parent.classList.contains('about-features-grid') || parent.classList.contains('about-team-grid') || parent.classList.contains('about-gallery-grid'))) {
             const siblings = Array.from(parent.children);
             const index = siblings.indexOf(entry.target);
             entry.target.style.transitionDelay = (index * 0.15) + 's';
