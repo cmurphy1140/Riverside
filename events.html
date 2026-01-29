@@ -3,17 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Riverside Cafe Events - Live music, DJs, happy hour, Sunday brunch, and special events in Vero Beach, FL.">
+  <meta name="description" content="Riverside Cafe Events - Live music, DJs, happy hour, Sunday brunch, and special events at Vero Beach's favorite waterfront restaurant.">
+  <meta name="keywords" content="Riverside Cafe events, Vero Beach live music, happy hour, Sunday brunch, sports bar events">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Events & Entertainment | Riverside Cafe - Vero Beach, FL">
+  <meta property="og:description" content="Live music, DJs, happy hour specials, and Sunday brunch on the Indian River Lagoon.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
 
   <title>Events & Entertainment | Riverside Cafe - Vero Beach, FL</title>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/events.css">
 </head>
 <body>
   <!-- Header -->
@@ -51,18 +64,246 @@
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>Events & Entertainment</h1>
-      <p>Live music, DJs, and good times every week</p>
+      <h1>Events &amp; Entertainment</h1>
+      <p>Live music, DJs, and good times every week on the water</p>
     </div>
   </section>
 
-  <!-- Events Content -->
-  <section class="section events-section">
-    <div class="container">
-      <!-- Events content will be built in Phase 8 -->
-      <p class="text-center text-light">Events calendar coming soon...</p>
-    </div>
-  </section>
+  <main>
+
+    <!-- Weekly Schedule -->
+    <section class="section events-weekly" id="weekly">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Weekly Lineup</h2>
+          <p>Something happening every day of the week</p>
+        </div>
+
+        <div class="events-weekly-grid" data-stagger>
+          <!-- Happy Hour -->
+          <div class="weekly-card fade-in">
+            <div class="weekly-card-accent"></div>
+            <div class="weekly-card-icon">
+              <i class="fa-solid fa-champagne-glasses"></i>
+            </div>
+            <div class="weekly-card-info">
+              <span class="weekly-card-when">Every Day</span>
+              <h3>Happy Hour</h3>
+              <p class="weekly-card-time"><i class="fa-regular fa-clock"></i> 4:00 PM &ndash; 7:00 PM</p>
+              <p class="weekly-card-desc">Drink specials and good vibes to kick off your evening. The best happy hour on the lagoon.</p>
+            </div>
+          </div>
+
+          <!-- Friday Night -->
+          <div class="weekly-card weekly-card--featured fade-in">
+            <div class="weekly-card-accent"></div>
+            <div class="weekly-card-icon">
+              <i class="fa-solid fa-guitar"></i>
+            </div>
+            <div class="weekly-card-info">
+              <span class="weekly-card-when">Friday</span>
+              <h3>Live Music + DJ</h3>
+              <p class="weekly-card-time"><i class="fa-regular fa-clock"></i> 5:30 PM &ndash; Close</p>
+              <p class="weekly-card-desc">Live bands from 5:30&ndash;8:30 PM followed by a DJ spinning from 10 PM until close. The biggest night of the week.</p>
+              <span class="weekly-card-tag"><i class="fa-solid fa-star"></i> Most Popular</span>
+            </div>
+          </div>
+
+          <!-- Saturday Night -->
+          <div class="weekly-card fade-in">
+            <div class="weekly-card-accent"></div>
+            <div class="weekly-card-icon">
+              <i class="fa-solid fa-compact-disc"></i>
+            </div>
+            <div class="weekly-card-info">
+              <span class="weekly-card-when">Saturday</span>
+              <h3>DJ Night</h3>
+              <p class="weekly-card-time"><i class="fa-regular fa-clock"></i> 10:00 PM &ndash; Close</p>
+              <p class="weekly-card-desc">Keep the weekend going with our resident DJ. Great music, great drinks, great views.</p>
+            </div>
+          </div>
+
+          <!-- Sunday Brunch -->
+          <div class="weekly-card weekly-card--featured fade-in">
+            <div class="weekly-card-accent"></div>
+            <div class="weekly-card-icon">
+              <i class="fa-solid fa-egg"></i>
+            </div>
+            <div class="weekly-card-info">
+              <span class="weekly-card-when">Sunday</span>
+              <h3>Brunch Buffet</h3>
+              <p class="weekly-card-time"><i class="fa-regular fa-clock"></i> 10:00 AM &ndash; 2:00 PM</p>
+              <p class="weekly-card-desc">All You Can Eat Buffet with Endless Mimosas &amp; Bloody Marys. A Riverside tradition you don't want to miss.</p>
+              <span class="weekly-card-tag"><i class="fa-solid fa-star"></i> Signature Event</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events List -->
+    <section class="section events-upcoming bg-light" id="upcoming">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Upcoming Events</h2>
+          <p>Special performances and seasonal happenings</p>
+        </div>
+
+        <div class="events-list" data-stagger>
+          <div class="event-list-item fade-in">
+            <div class="event-list-date">
+              <span class="event-list-month">FRI</span>
+              <span class="event-list-day">This Week</span>
+            </div>
+            <div class="event-list-info">
+              <div class="event-list-meta">
+                <span class="event-type event-type--music"><i class="fa-solid fa-music"></i> Live Music</span>
+                <span class="event-list-time"><i class="fa-regular fa-clock"></i> 5:30 PM</span>
+              </div>
+              <h3>Live Band Friday</h3>
+              <p>Enjoy live music on the waterfront patio. Band lineup posted weekly on our social media.</p>
+            </div>
+          </div>
+
+          <div class="event-list-item fade-in">
+            <div class="event-list-date">
+              <span class="event-list-month">SAT</span>
+              <span class="event-list-day">This Week</span>
+            </div>
+            <div class="event-list-info">
+              <div class="event-list-meta">
+                <span class="event-type event-type--dj"><i class="fa-solid fa-headphones"></i> DJ</span>
+                <span class="event-list-time"><i class="fa-regular fa-clock"></i> 10:00 PM</span>
+              </div>
+              <h3>Saturday Night DJ</h3>
+              <p>Dance the night away with our resident DJ spinning the best hits waterfront.</p>
+            </div>
+          </div>
+
+          <div class="event-list-item fade-in">
+            <div class="event-list-date">
+              <span class="event-list-month">SUN</span>
+              <span class="event-list-day">Weekly</span>
+            </div>
+            <div class="event-list-info">
+              <div class="event-list-meta">
+                <span class="event-type event-type--special"><i class="fa-solid fa-utensils"></i> Brunch</span>
+                <span class="event-list-time"><i class="fa-regular fa-clock"></i> 10:00 AM &ndash; 2:00 PM</span>
+              </div>
+              <h3>Sunday Brunch Buffet</h3>
+              <p>All You Can Eat Buffet with Endless Mimosas &amp; Bloody Marys. Bring the whole family.</p>
+            </div>
+          </div>
+
+          <div class="event-list-item event-list-item--highlight fade-in">
+            <div class="event-list-date">
+              <span class="event-list-month">SPECIAL</span>
+              <span class="event-list-day">&nbsp;</span>
+            </div>
+            <div class="event-list-info">
+              <div class="event-list-meta">
+                <span class="event-type event-type--special"><i class="fa-solid fa-calendar-star"></i> Holiday</span>
+              </div>
+              <h3>Super Bowl Watch Party</h3>
+              <p>The ultimate game day experience — 35 HD TVs, BOSE sound, drink specials, and a full game day menu. Reserve your spot early!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sports Viewing -->
+    <section class="section events-sports" id="sports">
+      <div class="container">
+        <div class="events-sports-content">
+          <div class="events-sports-text fade-in">
+            <span class="about-label"><i class="fa-solid fa-football"></i> Game Day Headquarters</span>
+            <h2>The Ultimate Sports Experience</h2>
+            <p>Riverside Cafe is the Treasure Coast's premier destination for sports viewing. Whether it's NFL Sunday, College Football Saturday, or a big playoff game, there's no better place to watch.</p>
+            <ul class="events-sports-features">
+              <li><i class="fa-solid fa-tv"></i> <strong>35 Large HD TVs</strong> throughout the venue</li>
+              <li><i class="fa-solid fa-volume-high"></i> <strong>BOSE Surround Sound</strong> system</li>
+              <li><i class="fa-solid fa-satellite-dish"></i> <strong>Direct TV NFL Sunday Ticket</strong></li>
+              <li><i class="fa-solid fa-football"></i> <strong>College Football Packages</strong></li>
+              <li><i class="fa-solid fa-beer-mug-empty"></i> <strong>Game Day Drink Specials</strong></li>
+              <li><i class="fa-solid fa-burger"></i> <strong>Full Menu Available</strong> during all games</li>
+            </ul>
+          </div>
+          <div class="events-sports-image fade-in">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-tv"></i>
+              <span>Sports Bar Photo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Events Callouts -->
+    <section class="section events-specials bg-light" id="specials">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>Special Events</h2>
+          <p>Seasonal celebrations and holiday happenings</p>
+        </div>
+
+        <div class="events-specials-grid" data-stagger>
+          <div class="special-card fade-in">
+            <div class="special-card-icon">
+              <i class="fa-solid fa-football"></i>
+            </div>
+            <h3>Super Bowl Sunday</h3>
+            <p>The biggest game on the biggest screens. Drink specials and a game day menu you won't forget.</p>
+          </div>
+
+          <div class="special-card fade-in">
+            <div class="special-card-icon">
+              <i class="fa-solid fa-flag-usa"></i>
+            </div>
+            <h3>4th of July</h3>
+            <p>Celebrate Independence Day waterfront with live music, special menus, and the best views of fireworks on the lagoon.</p>
+          </div>
+
+          <div class="special-card fade-in">
+            <div class="special-card-icon">
+              <i class="fa-solid fa-turkey"></i>
+            </div>
+            <h3>Holiday Season</h3>
+            <p>Thanksgiving, Christmas, and New Year's Eve celebrations with special menus and festive atmosphere.</p>
+          </div>
+
+          <div class="special-card fade-in">
+            <div class="special-card-icon">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <h3>Live Music Specials</h3>
+            <p>Featured bands and musicians throughout the year. Follow us on social media for the latest lineup announcements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Private Events CTA -->
+    <section class="events-private bg-secondary">
+      <div class="container">
+        <div class="events-private-content fade-in">
+          <div class="events-private-text">
+            <h2>Host Your Event at Riverside</h2>
+            <p>Looking for the perfect waterfront venue for your next private event, corporate gathering, or celebration? Riverside Cafe offers an unforgettable setting on the Indian River Lagoon.</p>
+          </div>
+          <div class="events-private-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-envelope"></i> Inquire Now
+            </a>
+            <a href="tel:7722345550" class="btn btn-white btn-lg">
+              <i class="fa-solid fa-phone"></i> Call 772.234.5550
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer bg-secondary">
