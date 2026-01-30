@@ -291,8 +291,11 @@
   text-align: center;
 }
 
-.events-sports-image .image-placeholder {
+.events-sports-image .image-placeholder,
+.events-sports-img {
+  width: 100%;
   height: 400px;
+  object-fit: cover;
   border-radius: var(--radius-lg);
 }
 
@@ -305,7 +308,8 @@
     order: -1;
   }
 
-  .events-sports-image .image-placeholder {
+  .events-sports-image .image-placeholder,
+  .events-sports-img {
     height: 300px;
   }
 }

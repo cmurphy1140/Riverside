@@ -63,14 +63,19 @@
   display: none;
 }
 
-.gallery-item .image-placeholder {
+.gallery-item .image-placeholder,
+.gallery-item-img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 0;
   transition: transform var(--transition-base);
 }
 
 .gallery-item:hover .image-placeholder,
-.gallery-item:focus .image-placeholder {
+.gallery-item:focus .image-placeholder,
+.gallery-item:hover .gallery-item-img,
+.gallery-item:focus .gallery-item-img {
   transform: scale(1.08);
 }
 

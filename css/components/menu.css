@@ -127,11 +127,14 @@
   width: 120px;
 }
 
-.menu-item-image .image-placeholder {
+.menu-item-image .image-placeholder,
+.menu-item-photo {
+  width: 100%;
   height: 100%;
   min-height: 120px;
+  object-fit: cover;
   border-radius: 0;
-  font-size: var(--text-lg);
+  display: block;
 }
 
 .menu-item-info {
@@ -202,9 +205,12 @@
   box-shadow: var(--shadow-md);
 }
 
-.menu-feature-image .image-placeholder {
+.menu-feature-image .image-placeholder,
+.menu-feature-image .menu-item-photo {
+  width: 100%;
   height: 100%;
   min-height: 300px;
+  object-fit: cover;
   border-radius: 0;
 }
 
@@ -273,7 +279,8 @@
   width: 100%;
 }
 
-.menu-item--dessert .menu-item-image .image-placeholder {
+.menu-item--dessert .menu-item-image .image-placeholder,
+.menu-item--dessert .menu-item-image .menu-item-photo {
   min-height: 160px;
 }
 

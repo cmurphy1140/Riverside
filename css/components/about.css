@@ -21,8 +21,11 @@
   z-index: 1;
 }
 
-.about-hero-bg .image-placeholder {
+.about-hero-bg .image-placeholder,
+.about-hero-img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 0;
 }
 
@@ -81,8 +84,11 @@
   align-items: center;
 }
 
-.about-welcome-image .image-placeholder {
+.about-welcome-image .image-placeholder,
+.about-welcome-img {
+  width: 100%;
   height: 400px;
+  object-fit: cover;
   border-radius: var(--radius-lg);
 }
 
@@ -139,7 +145,8 @@
     width: 100%;
   }
 
-  .about-welcome-image .image-placeholder {
+  .about-welcome-image .image-placeholder,
+  .about-welcome-img {
     height: 300px;
   }
 
@@ -176,8 +183,11 @@
   gap: var(--space-4);
 }
 
-.about-story-img .image-placeholder {
+.about-story-img .image-placeholder,
+.about-story-photo {
+  width: 100%;
   height: 220px;
+  object-fit: cover;
   border-radius: var(--radius-lg);
 }
 
@@ -315,8 +325,11 @@
   overflow: hidden;
 }
 
-.about-team-photo .image-placeholder {
+.about-team-photo .image-placeholder,
+.about-team-img {
+  width: 100%;
   height: 260px;
+  object-fit: cover;
 }
 
 .about-team-member h3 {
@@ -370,13 +383,17 @@
   cursor: pointer;
 }
 
-.about-gallery-item .image-placeholder {
+.about-gallery-item .image-placeholder,
+.about-gallery-img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 0;
   transition: transform var(--transition-base);
 }
 
-.about-gallery-item:hover .image-placeholder {
+.about-gallery-item:hover .image-placeholder,
+.about-gallery-item:hover .about-gallery-img {
   transform: scale(1.05);
 }
 

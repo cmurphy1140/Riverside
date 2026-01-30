@@ -42,13 +42,7 @@
     <div class="nav-overlay" id="nav-overlay"></div>
     <nav class="nav container">
       <a href="index.html" class="nav-logo">
-        <div class="logo-icon">
-          <i class="fa-solid fa-anchor"></i>
-        </div>
-        <div class="logo-text-wrap">
-          <span class="logo-text">Riverside Cafe</span>
-          <span class="logo-tagline">Vero Beach, FL</span>
-        </div>
+        <img src="images/logo.png" alt="Riverside Cafe" class="logo-img">
       </a>
 
       <ul class="nav-menu" id="nav-menu">
@@ -85,9 +79,12 @@
   <section class="hero" id="hero">
     <!-- Background Slideshow -->
     <div class="hero-slideshow">
-      <div class="hero-slide hero-slide--1 active" data-slide="0"></div>
-      <div class="hero-slide hero-slide--2" data-slide="1"></div>
-      <div class="hero-slide hero-slide--3" data-slide="2"></div>
+      <div class="hero-slide active" data-slide="0" style="background-image: url('images/home-01.jpg')"></div>
+      <div class="hero-slide" data-slide="1" style="background-image: url('images/home-05.jpg')"></div>
+      <div class="hero-slide" data-slide="2" style="background-image: url('images/sunset-02.jpg')"></div>
+      <div class="hero-slide" data-slide="3" style="background-image: url('images/home-03.jpg')"></div>
+      <div class="hero-slide" data-slide="4" style="background-image: url('images/home-04.jpg')"></div>
+      <div class="hero-slide" data-slide="5" style="background-image: url('images/home-06.jpg')"></div>
     </div>
 
     <!-- Hero Content -->
@@ -127,6 +124,9 @@
       <button class="hero-indicator active" data-slide="0" aria-label="Slide 1"></button>
       <button class="hero-indicator" data-slide="1" aria-label="Slide 2"></button>
       <button class="hero-indicator" data-slide="2" aria-label="Slide 3"></button>
+      <button class="hero-indicator" data-slide="3" aria-label="Slide 4"></button>
+      <button class="hero-indicator" data-slide="4" aria-label="Slide 5"></button>
+      <button class="hero-indicator" data-slide="5" aria-label="Slide 6"></button>
     </div>
 
     <!-- Scroll Indicator -->
@@ -207,11 +207,7 @@
           <a href="contact.html" class="btn btn-primary">Contact Us</a>
         </div>
         <div class="dock-dine-image fade-in">
-          <!-- Placeholder for dock image -->
-          <div class="image-placeholder">
-            <i class="fa-solid fa-sailboat"></i>
-            <span>Waterfront Image</span>
-          </div>
+          <img src="images/home-02.jpg" alt="Dock and dine" class="dock-image">
         </div>
       </div>
     </div>
@@ -227,45 +223,27 @@
 
       <div class="atmosphere-grid" data-stagger>
         <div class="atmosphere-item atmosphere-item--wide fade-in">
-          <div class="image-placeholder">
-            <i class="fa-solid fa-sun"></i>
-            <span>Waterfront Sunset</span>
-          </div>
+          <img src="images/sunset-bridge.jpg" alt="Waterfront sunset" class="atmosphere-img">
           <div class="atmosphere-label">Sunset Views</div>
         </div>
         <div class="atmosphere-item fade-in">
-          <div class="image-placeholder">
-            <i class="fa-solid fa-couch"></i>
-            <span>Interior Dining</span>
-          </div>
+          <img src="images/home-07.jpg" alt="Interior dining" class="atmosphere-img">
           <div class="atmosphere-label">Indoor Dining</div>
         </div>
         <div class="atmosphere-item fade-in">
-          <div class="image-placeholder">
-            <i class="fa-solid fa-umbrella-beach"></i>
-            <span>Outdoor Patio</span>
-          </div>
+          <img src="images/home-03.jpg" alt="Outdoor patio" class="atmosphere-img">
           <div class="atmosphere-label">Outdoor Seating</div>
         </div>
         <div class="atmosphere-item fade-in">
-          <div class="image-placeholder">
-            <i class="fa-solid fa-utensils"></i>
-            <span>Fresh Dishes</span>
-          </div>
+          <img src="images/food-mahi-caprese.jpg" alt="Fresh dishes" class="atmosphere-img">
           <div class="atmosphere-label">Fresh Cuisine</div>
         </div>
         <div class="atmosphere-item fade-in">
-          <div class="image-placeholder">
-            <i class="fa-solid fa-tv"></i>
-            <span>Sports Bar</span>
-          </div>
+          <img src="images/home-05.jpg" alt="Sports bar" class="atmosphere-img">
           <div class="atmosphere-label">Sports Bar</div>
         </div>
         <div class="atmosphere-item fade-in">
-          <div class="image-placeholder">
-            <i class="fa-solid fa-sailboat"></i>
-            <span>Dock Access</span>
-          </div>
+          <img src="images/home-02.jpg" alt="Boat docking" class="atmosphere-img">
           <div class="atmosphere-label">Boat Docking</div>
         </div>
       </div>
@@ -314,7 +292,7 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="cta bg-primary" id="cta">
+  <section class="cta cta--bg bg-primary" id="cta" style="background-image: url('images/sunset-02.jpg')">
     <div class="container">
       <div class="cta-content fade-in">
         <h2>Visit Us Today</h2>
@@ -331,7 +309,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <span class="footer-logo">Riverside Cafe</span>
+          <img src="images/logo.png" alt="Riverside Cafe" class="footer-logo-img">
           <p>Waterfront dining on the Indian River Lagoon since the beginning.</p>
           <p class="footer-dock"><i class="fa-solid fa-anchor"></i> Free Boat Docking</p>
         </div>
