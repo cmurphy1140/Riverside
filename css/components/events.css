@@ -16,17 +16,15 @@
   display: flex;
   gap: var(--space-5);
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-neutral);
   padding: var(--space-6);
-  box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--transition-base);
 }
 
 .weekly-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
 }
 
 .weekly-card-accent {
@@ -99,7 +97,7 @@
   gap: 4px;
   margin-top: var(--space-3);
   padding: var(--space-1) var(--space-3);
-  background-color: rgba(245, 88, 30, 0.1);
+  background-color: rgba(184, 113, 45, 0.1);
   color: var(--color-primary);
   font-size: 11px;
   font-weight: var(--font-bold);
@@ -140,15 +138,13 @@
   display: flex;
   gap: var(--space-6);
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-neutral);
   padding: var(--space-5) var(--space-6);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--transition-base);
 }
 
 .event-list-item:hover {
-  transform: translateX(4px);
-  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
 }
 
 .event-list-item--highlight {
@@ -211,7 +207,7 @@
 }
 
 .event-type--special {
-  background-color: rgba(245, 88, 30, 0.1);
+  background-color: rgba(184, 113, 45, 0.1);
   color: var(--color-primary);
 }
 
@@ -296,7 +292,6 @@
   width: 100%;
   height: 400px;
   object-fit: cover;
-  border-radius: var(--radius-lg);
 }
 
 @media (max-width: 1023px) {
@@ -328,14 +323,12 @@
   text-align: center;
   padding: var(--space-6);
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  border: 1px solid var(--color-neutral);
+  transition: border-color var(--transition-base);
 }
 
 .special-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
 }
 
 .special-card-icon {

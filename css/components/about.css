@@ -50,7 +50,6 @@
   font-size: var(--text-6xl);
   color: var(--color-white);
   margin-bottom: var(--space-4);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .about-hero-content p {
@@ -89,7 +88,6 @@
   width: 100%;
   height: 400px;
   object-fit: cover;
-  border-radius: var(--radius-lg);
 }
 
 .about-label {
@@ -117,7 +115,7 @@
 .about-signature {
   margin-top: var(--space-6);
   padding-top: var(--space-4);
-  border-top: 2px solid var(--color-primary);
+  border-top: 1px solid var(--color-primary);
   display: inline-block;
 }
 
@@ -188,7 +186,6 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: var(--radius-lg);
 }
 
 @media (max-width: 1023px) {
@@ -235,14 +232,12 @@
   text-align: center;
   padding: var(--space-8) var(--space-6);
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid var(--color-neutral);
+  transition: border-color var(--transition-base);
 }
 
 .about-feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
 }
 
 .about-feature-icon {
@@ -321,7 +316,6 @@
 
 .about-team-photo {
   margin-bottom: var(--space-4);
-  border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
@@ -378,7 +372,6 @@
 }
 
 .about-gallery-item {
-  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
 }
@@ -394,7 +387,7 @@
 
 .about-gallery-item:hover .image-placeholder,
 .about-gallery-item:hover .about-gallery-img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .about-gallery-item--tall {

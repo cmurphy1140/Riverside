@@ -17,7 +17,7 @@
 
 .header--scrolled {
   background-color: var(--color-white);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   padding: 0;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .logo-img {
-  height: 60px;
+  height: 75px;
   width: auto;
   display: block;
   transition: opacity var(--transition-fast);
@@ -54,14 +54,14 @@
 }
 
 .nav-link {
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
   color: var(--color-white);
   padding: var(--space-2) var(--space-1);
   position: relative;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-base);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--tracking-wider);
 }
 
 .header--scrolled .nav-link {
@@ -74,9 +74,9 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: width var(--transition-fast);
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--transition-base);
 }
 
 .nav-link:hover::after,
@@ -84,19 +84,12 @@
   width: 100%;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  opacity: 0.7;
+}
+
 .nav-link.active {
   color: var(--color-primary);
-}
-
-/* CTA Button in Nav */
-.nav-cta {
-  margin-left: var(--space-4);
-}
-
-.nav-cta .btn {
-  padding: var(--space-2) var(--space-5);
-  font-size: var(--text-sm);
 }
 
 /* Mobile Toggle */
@@ -140,7 +133,7 @@
     padding: 0;
     gap: 0;
     transition: right var(--transition-base);
-    box-shadow: var(--shadow-xl);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
     overflow-y: auto;
   }
 
@@ -184,16 +177,6 @@
     color: var(--color-primary);
   }
 
-  .nav-cta {
-    margin: var(--space-6);
-    margin-left: var(--space-6);
-  }
-
-  .nav-cta .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
   .nav-toggle {
     display: flex;
     z-index: calc(var(--z-fixed) + 1);
@@ -221,7 +204,7 @@
 
 @media (max-width: 639px) {
   .logo-img {
-    height: 46px;
+    height: 56px;
   }
 
   .nav {

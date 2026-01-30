@@ -4,20 +4,24 @@
 
 :root {
   /* Brand Colors */
-  --color-primary: #f5581e;        /* Orange - main brand color */
+  --color-primary: #B8712D;        /* Warm amber - fallback */
   --color-secondary: #082137;      /* Dark Blue - text, headers */
   --color-background: #FAFAFA;     /* Off-White - page background */
-  --color-accent: #dd0000;         /* Red - alerts, specials */
+  --color-accent: #C8601A;         /* Burnt orange */
   --color-neutral: #E1E1E2;        /* Gray - borders, dividers */
 
   /* Extended Palette */
-  --color-primary-dark: #d94a15;   /* Darker orange for hover states */
-  --color-primary-light: #ff7a4d;  /* Lighter orange for accents */
+  --color-primary-dark: #8B5518;   /* Deep amber for hover */
+  --color-primary-light: #D4943E;  /* Golden for light accents */
   --color-secondary-light: #0d3a5c; /* Lighter blue */
   --color-text: #082137;           /* Primary text color */
   --color-text-light: #4a5568;     /* Secondary text color */
   --color-white: #ffffff;
   --color-black: #000000;
+
+  /* Gradients */
+  --sunset-gradient: linear-gradient(135deg, #D4943E, #C8601A, #B8712D);
+  --golden-gradient: linear-gradient(135deg, #D4943E, #E8A84C, #D4943E);
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -85,6 +89,13 @@
   --transition-fast: 150ms ease;
   --transition-base: 300ms ease;
   --transition-slow: 500ms ease;
+  --transition-elegant: 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-float: 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Letter Spacing */
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.15em;
+  --tracking-widest: 0.25em;
 
   /* Z-Index Scale */
   --z-dropdown: 100;

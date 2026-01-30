@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
           if (parent && parent.hasAttribute('data-stagger')) {
             const siblings = Array.from(parent.children);
             const index = siblings.indexOf(entry.target);
-            entry.target.style.transitionDelay = (index * 0.15) + 's';
+            entry.target.style.transitionDelay = (index * 0.2) + 's';
           }
 
           entry.target.classList.add('fade-in--visible');
@@ -192,8 +192,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.05,
+      rootMargin: '0px 0px -30px 0px'
     });
 
     fadeElements.forEach(function(el) {

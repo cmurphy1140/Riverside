@@ -8,13 +8,29 @@
    Base Styles
    ========================================================================== */
 
+html {
+  background-color: var(--color-background);
+}
+
 body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   font-weight: var(--font-normal);
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: transparent;
   line-height: var(--leading-normal);
+}
+
+/* Nautical flags background watermark */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('../images/nautical-flags.svg') repeat;
+  background-size: 600px 600px;
+  opacity: 0.06;
+  pointer-events: none;
 }
 
 /* Skip Link (accessibility) */
@@ -40,8 +56,9 @@ body {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: var(--font-bold);
+  font-weight: var(--font-normal);
   color: var(--color-secondary);
+  line-height: var(--leading-tight);
 }
 
 h1 { font-size: var(--text-5xl); }
@@ -50,6 +67,62 @@ h3 { font-size: var(--text-3xl); }
 h4 { font-size: var(--text-2xl); }
 h5 { font-size: var(--text-xl); }
 h6 { font-size: var(--text-lg); }
+
+/* Accent color - warm amber on labels & icons */
+.text-primary,
+.about-label,
+.about-team-role,
+.weekly-card-when,
+.weekly-card-tag,
+.event-list-month,
+.event-type--special,
+.menu-feature-note,
+.event-time,
+.dock-features i,
+.events-sports-features li i,
+.weekly-card-time i,
+.menu-prep-list i,
+.info-item i,
+.hero-feature i,
+.footer-contact i,
+.footer-note,
+.footer-dock {
+  color: var(--color-primary);
+}
+
+/* Solid background accent - icons & active states */
+.menu-nav-link.active,
+.gallery-filter.active,
+.hero-indicator.active,
+.highlight-icon,
+.menu-category-icon,
+.about-feature-icon,
+.weekly-card-icon,
+.weekly-card--featured .weekly-card-icon,
+.special-card-icon,
+.menu-badge--popular,
+.weekly-card-accent,
+.event-list-item--highlight {
+  background-color: var(--color-primary);
+}
+
+/* White text on dark backgrounds */
+.hero-content h1,
+.hero-content h1 span,
+.bg-secondary h2,
+.bg-secondary h3,
+.cta h2,
+.cta h3,
+.cta--bg h2,
+.cta--bg h3,
+.events-private-text h2,
+.about-hero-content h1,
+.about-hero-content p,
+.menu-footer-text h3,
+.gallery-wallpapers-text h3,
+.footer h4 {
+  color: var(--color-white);
+}
 
 @media (max-width: 639px) {
   h1 { font-size: var(--text-4xl); }
@@ -177,14 +250,17 @@ p:last-child {
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-6);
+  padding: var(--space-4) var(--space-8);
   font-family: var(--font-body);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
   text-align: center;
-  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: opacity var(--transition-base), background-color var(--transition-base), color var(--transition-base);
 }
 
 .btn-primary {
@@ -208,9 +284,9 @@ p:last-child {
 }
 
 .btn-outline {
-  background-color: transparent;
   color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  border: 1px solid var(--color-primary);
+  background: transparent;
 }
 
 .btn-outline:hover {
@@ -224,13 +300,76 @@ p:last-child {
 }
 
 .btn-white:hover {
-  background-color: var(--color-background);
+  background-color: rgba(255, 255, 255, 0.85);
   color: var(--color-secondary);
 }
 
 .btn-lg {
-  padding: var(--space-4) var(--space-8);
-  font-size: var(--text-lg);
+  padding: var(--space-5) var(--space-10);
+  font-size: var(--text-base);
+}
+
+/* --------------------------------------------------------------------------
+   Oar-Shaped Buttons
+   -------------------------------------------------------------------------- */
+
+.btn-oar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-8) var(--space-3) var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  min-width: 200px;
+  /* Oar blade shape: squared left (shaft end), rounded right (blade tip) */
+  border-radius: 4px 50px 50px 4px;
+  transition: opacity var(--transition-base), border-color var(--transition-base);
+}
+
+/* Filled variant - wood textured */
+.btn-oar--filled {
+  background:
+    linear-gradient(to right, rgba(170, 95, 35, 0.7), rgba(200, 122, 42, 0.6)),
+    url('../images/wood-grain.jpg') center / cover no-repeat;
+  color: var(--color-white);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-oar--filled:hover {
+  opacity: 0.9;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Outline variant - subtle wood texture (dock grain) */
+.btn-oar--outline {
+  background:
+    linear-gradient(to right, rgba(170, 95, 35, 0.15), rgba(200, 122, 42, 0.1)),
+    url('../images/wood-grain-dock.jpg') center / cover no-repeat;
+  background-blend-mode: normal;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: var(--color-white);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-oar--outline:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  background:
+    linear-gradient(to right, rgba(170, 95, 35, 0.25), rgba(200, 122, 42, 0.2)),
+    url('../images/wood-grain-dock.jpg') center / cover no-repeat;
 }
 
 /* ==========================================================================
@@ -239,8 +378,8 @@ p:last-child {
 
 .card {
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-neutral);
   overflow: hidden;
 }
 
@@ -351,14 +490,13 @@ p:last-child {
   text-align: center;
   padding: var(--space-8);
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid var(--color-neutral);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-base);
 }
 
 .highlight-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
 }
 
 .highlight-icon {
@@ -427,7 +565,6 @@ p:last-child {
 }
 
 .dock-dine-image {
-  border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
@@ -475,7 +612,6 @@ p:last-child {
 
 .atmosphere-item {
   position: relative;
-  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
 }
@@ -544,14 +680,14 @@ p:last-child {
 .event-card {
   background-color: var(--color-white);
   padding: var(--space-6);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-neutral);
+  border-radius: var(--radius-sm);
   text-align: center;
-  transition: transform var(--transition-base);
+  transition: border-color var(--transition-base);
 }
 
 .event-card:hover {
-  transform: translateY(-3px);
+  border-color: var(--color-primary);
 }
 
 .event-day {
@@ -784,8 +920,8 @@ p:last-child {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transform: translateY(40px);
+  transition: opacity var(--transition-float), transform var(--transition-float);
 }
 
 .fade-in--visible {
